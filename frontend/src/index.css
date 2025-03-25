@@ -1,0 +1,58 @@
+/* Apply a colorful gradient background */
+body {
+    background: linear-gradient(135deg, #f8c291, #fad390, #6a89cc, #82ccdd);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Centering the app */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Glassmorphism effect */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 50%;
+}
+
+/* Input field */
+.form-control {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #6a11cb;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2575fc;
+}
+
+/* Task List */
+.list-group-item {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+/* Delete Button */
+.btn-danger {
+    background-color: #ff4d4d;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #ff1a1a;
+}
