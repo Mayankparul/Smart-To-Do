@@ -1,6 +1,9 @@
 name: CI/CD Pipeline
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -14,14 +17,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'npm'
 
-      - name: Install Dependencies
-        run: |
-          cd frontend
-          npm install
+      - name: Install Dependencies (Frontend)
+        run: npm install
+        working-directory: frontend  # 🔹 Fix: Run inside frontend/
 
-      - name: Build Project
-        run: |
-          cd frontend
-          npm run build
+      - name: Build Frontend
+        run: npm run build
+        working-directory: frontend  # 🔹 Fix: Build inside frontend/
