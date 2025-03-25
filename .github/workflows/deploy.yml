@@ -26,4 +26,4 @@ jobs:
       - name: Build Frontend
         run: |
           cd frontend
-          npm run build
+          npm install --force --legacy-peer-deps
