@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        NODE_HOME = "/usr/bin"
-        PATH = "${NODE_HOME}:${PATH}"
-    }
     stages {
         stage('Clone Repository') {
             steps {
@@ -12,12 +8,12 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'cd frontend && ${NODE_HOME}/npm install'
+                sh 'cd frontend && /usr/bin/npm install'
             }
         }
         stage('Build Application') {
             steps {
-                sh 'cd frontend && ${NODE_HOME}/npm run build'
+                sh 'cd frontend && /usr/bin/npm run build'
             }
         }
         stage('Deploy') {
